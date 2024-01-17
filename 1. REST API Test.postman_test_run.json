@@ -1,0 +1,176 @@
+{
+	"id": "1493d50d-2336-4337-a9fb-e0a9fbac4f34",
+	"name": "1. REST API Test",
+	"timestamp": "2024-01-16T09:22:36.659Z",
+	"collection_id": "32340362-0ca15527-a05c-4bcf-abf7-cb3fafdcec2f",
+	"folder_id": 0,
+	"environment_id": "32340362-33117772-cd75-4705-ad11-3da1f74a4071",
+	"totalPass": 0,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2024-01-16T09:22:32.812Z",
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "c55c26a6-0ae5-4f8b-a776-a335890f2df3",
+			"name": "Get All User Request",
+			"url": "https://reqres.in/api/users?page=1",
+			"time": 404,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				404
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "78af82be-6270-4970-ae07-0bc0216182e5",
+			"name": "Get One User by userId",
+			"url": "https://reqres.in/api/users/2",
+			"time": 109,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				109
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "4511a76f-9b45-4de8-855d-ce95f8b34887",
+			"name": "Get all user request 2",
+			"url": "https://reqres.in/api/users?page=1&size=10&sort=acs",
+			"time": 168,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				168
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "61b091bb-5d1a-46e2-bd7f-7f159299bc39",
+			"name": "Create user Request",
+			"url": "https://reqres.in/api/users",
+			"time": 414,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				414
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "a885ffc9-bf23-487d-ade4-c7c6952a2a86",
+			"name": "Update user by userId",
+			"url": "https://reqres.in/api/users/2",
+			"time": 491,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				491
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "d721a41d-7b45-4683-8954-93807021e00a",
+			"name": "Delete user by userId",
+			"url": "https://reqres.in/api/users/3",
+			"time": 484,
+			"responseCode": {
+				"code": 204,
+				"name": "No Content"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				484
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "82b25ab2-9c0e-437b-b6a8-8c8a23f0b98b",
+			"name": "Update user job by userId",
+			"url": "https://reqres.in/api/users/2",
+			"time": 469,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				469
+			],
+			"allTests": [
+				{}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 2539,
+	"collection": {
+		"requests": [
+			{
+				"id": "c55c26a6-0ae5-4f8b-a776-a335890f2df3",
+				"method": "GET"
+			},
+			{
+				"id": "78af82be-6270-4970-ae07-0bc0216182e5",
+				"method": "GET"
+			},
+			{
+				"id": "4511a76f-9b45-4de8-855d-ce95f8b34887",
+				"method": "GET"
+			},
+			{
+				"id": "61b091bb-5d1a-46e2-bd7f-7f159299bc39",
+				"method": "POST"
+			},
+			{
+				"id": "a885ffc9-bf23-487d-ade4-c7c6952a2a86",
+				"method": "PUT"
+			},
+			{
+				"id": "d721a41d-7b45-4683-8954-93807021e00a",
+				"method": "DELETE"
+			},
+			{
+				"id": "82b25ab2-9c0e-437b-b6a8-8c8a23f0b98b",
+				"method": "PATCH"
+			}
+		]
+	}
+}

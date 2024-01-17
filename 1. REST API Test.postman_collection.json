@@ -1,0 +1,456 @@
+{
+	"info": {
+		"_postman_id": "0ca15527-a05c-4bcf-abf7-cb3fafdcec2f",
+		"name": "1. REST API Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32340362",
+		"_collection_link": "https://api-aut-test-636814.postman.co/workspace/API-Automation-Test~751694b3-ac5c-44f4-bb90-f4cb9e4b7c5c/collection/32340362-0ca15527-a05c-4bcf-abf7-cb3fafdcec2f?action=share&source=collection_link&creator=32340362"
+	},
+	"item": [
+		{
+			"name": "Get All User Request",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://reqres.in/api/users?page=1",
+					"protocol": "https",
+					"host": [
+						"reqres",
+						"in"
+					],
+					"path": [
+						"api",
+						"users"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "size",
+							"value": "2",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get One User by userId",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://reqres.in/api/users/2",
+					"protocol": "https",
+					"host": [
+						"reqres",
+						"in"
+					],
+					"path": [
+						"api",
+						"users",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all user request 2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Successful Test 200 ok\", function () { \r",
+							"    pm.response.to.have.status(200);\r",
+							"\r",
+							"\r",
+							"   var env_host_url = pm.environment.get(\"HOST_URL\");\r",
+							"   console.log(\"Env_OST_URL :: \",env_host_url);\r",
+							"    \r",
+							"\r",
+							"   var globals_host_url = pm.globals.get(\"HOST_URL\");\r",
+							"   console.log(\"Globals_OST_URL :: \",globals_host_url);\r",
+							"\r",
+							"   var local_var = pm.collectionVariables.get(\"HOST_URL\");\r",
+							"  console.log(\"Local OST_URL ::\", local_var);\r",
+							"\r",
+							"\r",
+							"   var collection_var = pm.collectionVariables.get(\"URL\");\r",
+							"    console.log(\"Collection OST_URL ::\", collection_var);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test(\"Successful Test 200 ok\", function () { \r",
+							"    pm.response.to.have.status(200);\r",
+							"\r",
+							"\r",
+							"   var env_host_url = pm.environment.get(\"HOST_URL\");\r",
+							"   console.log(\"Env HOST_URL :: \",env_host_url);\r",
+							"    \r",
+							"\r",
+							"   var globals_host_url = pm.globals.get(\"HOST_URL\");\r",
+							"   console.log(\"Globals HOST_URL :: \",globals_host_url);\r",
+							"\r",
+							"   var local_var = pm.collectionVariables.get(\"HOST_URL\");\r",
+							"  console.log(\"Local HOST_URL ::\", local_var);\r",
+							"\r",
+							"\r",
+							"   var collection_var = pm.collectionVariables.get(\"URL\");\r",
+							"    console.log(\"Collection HOST_URL ::\", collection_var);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"\r",
+							"pm.test(\"Get varaibles from diffrent scope\", function () { \r",
+							"    pm.response.to.have.status(200);\r",
+							"\r",
+							"\r",
+							"// set environment varaibles\r",
+							"    pm.environment.set(\"HOST_ADDRESS\", \"https://www.simplilearn.com\");\r",
+							"\r",
+							"\r",
+							"   var env_host_url = pm.environment.get(\"HOST_ADDRESSL\");\r",
+							"   console.log(\"Env HOST_ADDRESS :: \",env_host_url);\r",
+							"    \r",
+							"\r",
+							"// set globals varaibles\r",
+							" pm.globals.set(\"HOST_ADDRESS\", \"https://www.google.com\");\r",
+							"   var globals_host_url = pm.globals.get(\"HOST_ADDRESS\");\r",
+							"   console.log(\"Globals HOST_ADDRESS :: \",globals_host_url);\r",
+							"\r",
+							"   var local_var = pm.collectionVariables.get(\"HOST_URL\");\r",
+							"  console.log(\"Local HOST_URL ::\", local_var);\r",
+							"\r",
+							"\r",
+							"// set collection varaibles\r",
+							" pm.collectionVariables.set(\"HOST_ADDRESS\", \"https://www.facebook.com\");\r",
+							"\r",
+							"   var collection_var = pm.collectionVariables.get(\"HOST_ADDRESS\");\r",
+							"    console.log(\"Collection HOST_ADDRESS ::\", collection_var);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{HOST_URL}}/users?page={{PAGE}}&size={{SIZE}}&sort=acs&host_address={{HOST_ADDRESS}}",
+					"host": [
+						"{{HOST_URL}}"
+					],
+					"path": [
+						"users"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "{{PAGE}}"
+						},
+						{
+							"key": "size",
+							"value": "{{SIZE}}"
+						},
+						{
+							"key": "sort",
+							"value": "acs"
+						},
+						{
+							"key": "host_address",
+							"value": "{{HOST_ADDRESS}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create user Request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"morpheus\",\r\n    \"job\": \"leader\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://reqres.in/api/users",
+					"protocol": "https",
+					"host": [
+						"reqres",
+						"in"
+					],
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update user by userId",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"morpheus\",\r\n    \"job\": \"zion resident\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://reqres.in/api/users/2",
+					"protocol": "https",
+					"host": [
+						"reqres",
+						"in"
+					],
+					"path": [
+						"api",
+						"users",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete user by userId",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://reqres.in/api/users/3",
+					"protocol": "https",
+					"host": [
+						"reqres",
+						"in"
+					],
+					"path": [
+						"api",
+						"users",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update user job by userId",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"job\": \"software tester\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://reqres.in/api/users/2",
+					"protocol": "https",
+					"host": [
+						"reqres",
+						"in"
+					],
+					"path": [
+						"api",
+						"users",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create user Request 2",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"pm.variables.set(\"HOST_ADDRESS\", \"www.amazon.com\");\r",
+							"pm.variables.set(\"RANDOM_JOB_TITLE\", \"{{$randomJobTitle}}\");"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Successful Test 201 Created\", function () {\r",
+							"    pm.response.to.have.status(201);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Get job title\", function () {\r",
+							"    var jobtitle = pm.variables.get(\"RANDOM_JOB_TITLE\");\r",
+							"     console.log(\"jobtitle\",jobtitle)\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.job).to.not.null;\r",
+							"    \r",
+							"});\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \r\n    \"name\":\"{{HOST_ADDRESS}}\",\r\n    \"job\": \"{{RANDOM_JOB_TITLE}}\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{HOST_URL}}/users",
+					"host": [
+						"{{HOST_URL}}"
+					],
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get one user by userId-2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Successful Test 200 ok\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Get userId and should not be null\", function () {\r",
+							"    var userId = pm.variables.get(\"userId\");\r",
+							"    console.log(\"userId ::\",userId)\r",
+							"    pm.expect(userId).to.equals(\"12\");\r",
+							"});\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{HOST_URL}}/users/{{userId}}",
+					"host": [
+						"{{HOST_URL}}"
+					],
+					"path": [
+						"users",
+						"{{userId}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update user by user Id-2",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"morpheus\",\r\n    \"job\": \"{{JOB_TITLE}}\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{HOST_URL}}/users/{{userId}}",
+					"host": [
+						"{{HOST_URL}}"
+					],
+					"path": [
+						"users",
+						"{{userId}}"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "HOST_ADDRESS",
+			"value": ""
+		},
+		{
+			"key": "URL",
+			"value": "https://reqres.in/api",
+			"type": "string"
+		},
+		{
+			"key": "userId",
+			"value": "12"
+		}
+	]
+}

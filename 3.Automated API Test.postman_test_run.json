@@ -1,0 +1,288 @@
+{
+	"id": "9e065e02-58a6-43f4-a881-a25f9518d48b",
+	"name": "3.Automated API Test",
+	"timestamp": "2024-01-16T09:19:39.502Z",
+	"collection_id": "32340362-fc3b9aa0-5d57-4bd7-afcd-46cb1ead102d",
+	"folder_id": 0,
+	"environment_id": "32340362-33117772-cd75-4705-ad11-3da1f74a4071",
+	"totalPass": 42,
+	"delay": "3000",
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2024-01-16T09:19:03.494Z",
+	"totalFail": 2,
+	"results": [
+		{
+			"id": "cd08de39-18a3-49c8-96ce-4d358a47f4f2",
+			"name": "Get All User Request 3",
+			"url": "https://reqres.in/api/users?page=0&size=10&sort=acs",
+			"time": 105,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Repose body should be JSON": false,
+				"Response time is less than 200ms": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 3,
+					"fail": 0
+				},
+				"Repose body should be JSON": {
+					"pass": 1,
+					"fail": 2
+				},
+				"Response time is less than 200ms": {
+					"pass": 2,
+					"fail": 0
+				}
+			},
+			"times": [
+				94,
+				105
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Repose body should be JSON": false,
+					"Response time is less than 200ms": true
+				},
+				{
+					"Status code is 200": true,
+					"Repose body should be JSON": false,
+					"Response time is less than 200ms": true
+				}
+			]
+		},
+		{
+			"id": "05a9a00d-f0a9-4a36-8b14-12e05ee8f370",
+			"name": "Create a user",
+			"url": "https://reqres.in/api/users",
+			"time": 428,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Status code is 201 Created": true,
+				"Response time is less than 1000ms": true,
+				"Response should be a JSON": true
+			},
+			"testPassFailCounts": {
+				"Status code is 201 Created": {
+					"pass": 2,
+					"fail": 0
+				},
+				"Response time is less than 1000ms": {
+					"pass": 2,
+					"fail": 0
+				},
+				"Response should be a JSON": {
+					"pass": 3,
+					"fail": 0
+				}
+			},
+			"times": [
+				549,
+				428
+			],
+			"allTests": [
+				{
+					"Status code is 201 Created": true,
+					"Response time is less than 1000ms": true,
+					"Response should be a JSON": true
+				},
+				{
+					"Status code is 201 Created": true,
+					"Response time is less than 1000ms": true,
+					"Response should be a JSON": true
+				}
+			]
+		},
+		{
+			"id": "b27da87a-b525-4980-a331-0c9a25e642cd",
+			"name": "Get user by userId",
+			"url": "https://reqres.in/api/users/12",
+			"time": 110,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200 Successful": true,
+				"Response time is less than 1000ms": true,
+				"Response should be a JSON": true,
+				"Response should be a JSON and dynamic properties": true,
+				"Response should be a JSON and not null & not undefined properties": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200 Successful": {
+					"pass": 2,
+					"fail": 0
+				},
+				"Response time is less than 1000ms": {
+					"pass": 2,
+					"fail": 0
+				},
+				"Response should be a JSON": {
+					"pass": 2,
+					"fail": 0
+				},
+				"Response should be a JSON and dynamic properties": {
+					"pass": 2,
+					"fail": 0
+				},
+				"Response should be a JSON and not null & not undefined properties": {
+					"pass": 2,
+					"fail": 0
+				}
+			},
+			"times": [
+				86,
+				110
+			],
+			"allTests": [
+				{
+					"Status code is 200 Successful": true,
+					"Response time is less than 1000ms": true,
+					"Response should be a JSON": true,
+					"Response should be a JSON and dynamic properties": true,
+					"Response should be a JSON and not null & not undefined properties": true
+				},
+				{
+					"Status code is 200 Successful": true,
+					"Response time is less than 1000ms": true,
+					"Response should be a JSON": true,
+					"Response should be a JSON and dynamic properties": true,
+					"Response should be a JSON and not null & not undefined properties": true
+				}
+			]
+		},
+		{
+			"id": "b5f2daa7-702d-4746-94bf-e47d049a4d16",
+			"name": "Update a user by userId",
+			"url": "https://reqres.in/api/users/2",
+			"time": 756,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200 Created": true,
+				"Response time is less than 1000ms": true,
+				"Response should be a JSON": true,
+				"Content-Type is present": true,
+				"Content-Type header is application/json": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200 Created": {
+					"pass": 2,
+					"fail": 0
+				},
+				"Response time is less than 1000ms": {
+					"pass": 2,
+					"fail": 0
+				},
+				"Response should be a JSON": {
+					"pass": 3,
+					"fail": 0
+				},
+				"Content-Type is present": {
+					"pass": 2,
+					"fail": 0
+				},
+				"Content-Type header is application/json": {
+					"pass": 2,
+					"fail": 0
+				}
+			},
+			"times": [
+				833,
+				756
+			],
+			"allTests": [
+				{
+					"Status code is 200 Created": true,
+					"Response time is less than 1000ms": true,
+					"Response should be a JSON": true,
+					"Content-Type is present": true,
+					"Content-Type header is application/json": true
+				},
+				{
+					"Status code is 200 Created": true,
+					"Response time is less than 1000ms": true,
+					"Response should be a JSON": true,
+					"Content-Type is present": true,
+					"Content-Type header is application/json": true
+				}
+			]
+		},
+		{
+			"id": "9e5b8315-5eb7-407e-96a8-9f7730e6829c",
+			"name": "New Request",
+			"url": "https://reqres.in/api/users/3",
+			"time": 761,
+			"responseCode": {
+				"code": 204,
+				"name": "No Content"
+			},
+			"tests": {
+				"Status code is 204: Delete has no content": true,
+				"Response time is less than 1000ms": true
+			},
+			"testPassFailCounts": {
+				"Status code is 204: Delete has no content": {
+					"pass": 2,
+					"fail": 0
+				},
+				"Response time is less than 1000ms": {
+					"pass": 2,
+					"fail": 0
+				}
+			},
+			"times": [
+				756,
+				761
+			],
+			"allTests": [
+				{
+					"Status code is 204: Delete has no content": true,
+					"Response time is less than 1000ms": true
+				},
+				{
+					"Status code is 204: Delete has no content": true,
+					"Response time is less than 1000ms": true
+				}
+			]
+		}
+	],
+	"count": 2,
+	"totalTime": 4478,
+	"collection": {
+		"requests": [
+			{
+				"id": "cd08de39-18a3-49c8-96ce-4d358a47f4f2",
+				"method": "GET"
+			},
+			{
+				"id": "05a9a00d-f0a9-4a36-8b14-12e05ee8f370",
+				"method": "POST"
+			},
+			{
+				"id": "b27da87a-b525-4980-a331-0c9a25e642cd",
+				"method": "GET"
+			},
+			{
+				"id": "b5f2daa7-702d-4746-94bf-e47d049a4d16",
+				"method": "PUT"
+			},
+			{
+				"id": "9e5b8315-5eb7-407e-96a8-9f7730e6829c",
+				"method": "DELETE"
+			}
+		]
+	}
+}
